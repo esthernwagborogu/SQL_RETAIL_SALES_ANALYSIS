@@ -2,11 +2,10 @@
 
 ## Project Overview
 
-**Project Title**: Retail Sales Analysis  
-**Level**: Beginner  
-**Database**: `p1_retail_db`
+**Project Title**: Retail Sales Analysis   
+**Database**: `RETAIL SALES`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries.
 
 ## Objectives
 
@@ -19,11 +18,11 @@ This project is designed to demonstrate SQL skills and techniques typically used
 
 ### 1. Database Setup
 
-- **Database Creation**: The project starts by creating a database named `p1_retail_db`.
+- **Database Creation**: The project starts by creating a database named `RETAIL SALES`.
 - **Table Creation**: A table named `retail_sales` is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
 
 ```sql
-CREATE DATABASE p1_retail_db;
+CREATE DATABASE RETAIL SALES;
 
 CREATE TABLE retail_sales
 (
@@ -66,9 +65,30 @@ WHERE
     quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
 ```
 
-### 3. Data Analysis & Findings
+### 3. Data exploration, Analysis & Findings
 
-The following SQL queries were developed to answer specific business questions:
+ **data exploration**
+**how many sales we have?**
+``sql
+SELECT COUNT(*) as total_sale FROM retail_sales
+``
+   1987 total sales
+
+ **how many unique customer we have ?**
+ ```sql
+SELECT COUNT(Distinct customer_id) as total_sale FROM retail_sales
+```
+-155 distinct customer--
+
+**how many unique category we have?**
+```sql
+SELECT COUNT(Distinct category) as total_sale FROM retail_sales
+SELECT DISTINCT(category) FROM retail_sales
+```
+---ans 3 categories
+Electronics, Clothing and Beauty 
+
+### The following SQL queries were developed to answer specific business questions:
 
 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**:
 ```sql
@@ -147,7 +167,7 @@ GROUP BY 1, 2
 WHERE rank = 1
 ```
 
-8. **Write a SQL query to find the top 5 customers based on the highest total sales **:
+8. **Write a SQL query to find the top 5 customers based on the highest total sales**:
 ```sql
 SELECT 
     customer_id,
@@ -211,17 +231,14 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
 4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
-## Author - Zero Analyst
+## Author - Esther Nwagborogu
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
 ### Stay Updated and Join the Community
 
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
+For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media:
+- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/esthernwagborogu-data-analyst)
 
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
-- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
 
 Thank you for your support, and I look forward to connecting with you!
